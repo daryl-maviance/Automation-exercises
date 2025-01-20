@@ -4,7 +4,7 @@ describe('Automation exercises login and sign up', () => {
       cy.visit('https://automationexercise.com')
   })
 
-  it('signs up a new user', () => {
+  it.only('signs up a new user', () => {
     cy.getByHref("/login").click()
     cy.get(`[action='/signup']`).should("exist")
     cy.getByData("signup-name").type("Daryl  Nfoye")

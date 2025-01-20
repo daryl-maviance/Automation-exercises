@@ -30,6 +30,10 @@ Cypress.Commands.add("getByValue", (value) => {
     return cy.get(`[value='${value}']`)
 })
 
+Cypress.Commands.add("getByClass", (className) => {
+    return cy.get(`[class='${className}']`)
+})
+
 
 
 //*1.
