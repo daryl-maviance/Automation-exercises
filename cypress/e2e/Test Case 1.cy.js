@@ -1,11 +1,7 @@
 describe('Automation exercises login and sign up', () => {
-
-  beforeEach(() => {
-      cy.visit('https://automationexercise.com')
-  })
-
   // Test case for signing up a new user
-  it.only('signs up a new user', () => {
+  it('Registers a new User', () => {
+    cy.visit('https://automationexercise.com')
     // Navigate to the login page
     cy.getByHref("/login").click()
     // Verify the signup form exists
@@ -38,19 +34,6 @@ describe('Automation exercises login and sign up', () => {
     cy.getByData("create-account").click()
     // Verify the continue button exists and click it
     cy.getByData("continue-button").should("exist").click()
-  })
-
-  // Test case for logging in a user and deleting the account
-  it("logs in a user and deletes his account", () => {
-    // Navigate to the login page
-    cy.getByHref("/login").click()
-    // Verify the login form exists
-    cy.get(`[action='/login']`).should("exist")
-    // Fill out the login form
-    cy.getByData("login-email").type("nfoyedewilde@gmail.com")
-    cy.getByData("login-password").type("Mypassword")
-    // Submit the login form
-    cy.getByData("login-button").should("exist").click()
     // CLick on the delete account button
     cy.getByHref("/delete_account").click()
     // Verify the continue button exists and click it
