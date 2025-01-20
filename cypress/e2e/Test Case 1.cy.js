@@ -1,4 +1,4 @@
-describe('Automation exercises login and sign up', () => {
+describe('Registers  User', () => {
   // Test case for signing up a new user
   it('Registers a new User', () => {
     cy.visit('https://automationexercise.com')
