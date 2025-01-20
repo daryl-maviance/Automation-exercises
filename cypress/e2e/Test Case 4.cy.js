@@ -4,7 +4,7 @@ describe("Logout User", () => {
         cy.visit('https://automationexercise.com')
     })
 
-    it('Login User with correct email and password then log him out', () => {
+    it('Registers new user', () => {
         // Navigate to the login page
         cy.getByHref("/login").click()
         // Verify the signup form exists
@@ -40,7 +40,7 @@ describe("Logout User", () => {
       })
 
 
-    it.only("logs in the user and verifies that his name is displayed in the Menu", () => {
+    it.only("Login User with correct email and password then log him out", () => {
         // Verify that the current pathname is the one of the home page
         cy.location("pathname").should("eq","/")
         // Click on the login option
