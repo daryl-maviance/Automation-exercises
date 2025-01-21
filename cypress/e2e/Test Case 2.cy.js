@@ -3,11 +3,11 @@ const baseUrl = Cypress.env("BASE_URL");
 const selectors = {
     loginLink: "[href='/login']",
     loginForm: `[action='/login']`,
-    loginEmail: "[data-cy='login-email']",
-    loginPassword: "[data-cy='login-password']",
-    loginButton: "[data-cy='login-button']",
+    loginEmail: "[data-qa='login-email']",
+    loginPassword: "[data-qa='login-password']",
+    loginButton: "[data-qa='login-button']",
     deleteAccountLink: "[href='/delete_account']",
-    accountDeleted: "[data-cy='account-deleted']"
+    accountDeleted: "[data-qa='account-deleted']"
 };
 
 describe("Login User with correct email and password", () => {
