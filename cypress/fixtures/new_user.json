@@ -1,0 +1,18 @@
+{
+    "name": "John Doe",
+    "email": "Doe@gmail.com",
+    "password": "testpass",
+    "day": "03",
+    "month": "06",
+    "year": "1982",
+    "first_name": "Doe",
+    "last_name": "John",
+    "company": "Google",
+    "address": "Berlin",
+    "address2": "London",
+    "country": "Canada",
+    "state": "Germany",
+    "city": "San Francisco",
+    "zipcode": "00049",
+    "mobile_number": "4912639854"
+  }
