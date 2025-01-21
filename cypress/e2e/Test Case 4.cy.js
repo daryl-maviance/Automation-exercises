@@ -1,4 +1,12 @@
-const baseUrl =  Cypress.env("BASE_URL");
+const baseUrl = Cypress.env("BASE_URL");
+const selectors = {
+    loginLink: "[href='/login']",
+    loginForm: `[action='/login']`,
+    loginEmail: "[data-cy='login-email']",
+    loginPassword: "[data-cy='login-password']",
+    loginButton: "[data-cy='login-button']",
+    logoutLink: "[href='/logout']",
+};
 
 describe("Logout User", () => {
 
@@ -8,24 +16,24 @@ describe("Logout User", () => {
 
     it("Login User with correct email and password then log him out", () => {
         // Verify that the current pathname is the one of the home page
-        cy.location("pathname").should("eq","/")
+        cy.location("pathname").should("eq", "/")
         // Click on the login option
-        cy.getByHref("/login").click()
+        cy.get(selectors.loginLink).click()
         // Ensure the login form is present
-        cy.getByClass("login-form").should("exist")
+        cy.get(selectors.loginForm).should("exist")
         cy.fixture("valid_user").then((user) => {
             // Fill out the login form
-            cy.getByData("login-email").type(user.email)
-            cy.getByData("login-password").type(user.password)
+            cy.get(selectors.loginEmail).type(user.email)
+            cy.get(selectors.loginPassword).type(user.password)
             // Click the login button
-            cy.getByData("login-button").click()
+            cy.get(selectors.loginButton).click()
             // Verify that the user's name is displayed in the menu
             cy.get("a").contains(`Logged in as ${user.name}`).should("exist")
         })
-        // CLick on the logout button
-        cy.getByHref("/logout").click()
+        // Click on the logout button
+        cy.get(selectors.logoutLink).click()
         // Verify that user is navigated to login page
-        cy.location("pathname").should("eq","/login")
+        cy.location("pathname").should("eq", "/login")
     })
 
 })
