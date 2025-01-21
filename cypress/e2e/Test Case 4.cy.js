@@ -19,6 +19,7 @@ describe("Logout User", () => {
         cy.location("pathname").should("eq", "/")
         // Click on the login option
         cy.get(selectors.loginLink).click()
+        cy.url().should('include', '/login');
         // Ensure the login form is present
         cy.get(selectors.loginForm).should("exist")
         cy.fixture("valid_user").then((user) => {

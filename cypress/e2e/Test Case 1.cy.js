@@ -39,6 +39,7 @@ describe('Registers User', () => {
     // Navigate to the login page
     cy.get(selectors.loginLink).click()
     // Verify the signup form exists
+    cy.url().should('include', '/login');
     cy.get(selectors.signupForm).should("exist")
 
     cy.fixture("new_user").then((user) => {

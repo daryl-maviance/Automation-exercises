@@ -18,6 +18,7 @@ describe("Login User with incorrect email and password", () => {
         cy.location("pathname").should("eq", "/")
         // Click on the login option
         cy.get(selectors.loginLink).click()
+        cy.url().should('include', '/login');
         // Ensure the login form is present
         cy.get(selectors.loginForm).should("exist")
         cy.fixture("invalid_user").then((user) => {
