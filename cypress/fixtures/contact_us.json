@@ -1,0 +1,8 @@
+{
+    "name":"tetuser",
+    "email":"tetuser@gmail.com",
+    "subject":"testsubject",
+    "message":"this is a test message for the contact form test",
+    "filePath":"../../uploadfiles/testfile.png"
+}
+
