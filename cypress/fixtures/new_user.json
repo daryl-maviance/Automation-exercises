@@ -1,20 +1,20 @@
 {
-    "name": "John Doe",
-    "email": "Doe@gmail.com",
+    "name": "New user",
+    "email": "newuser@gmail.com",
     "password": "testpass",
-    "day": "03",
-    "month": "06",
-    "year": "1982",
-    "first_name": "Doe",
-    "last_name": "John",
-    "company": "Google",
-    "address": "Berlin",
-    "address2": "London",
-    "country": "Canada",
-    "state": "Germany",
-    "city": "San Francisco",
-    "zipcode": "00049",
-    "mobile_number": "4912639854"
+    "day": "24",
+    "month": "01",
+    "year": "2025",
+    "first_name": "user",
+    "last_name": "new",
+    "company": "Innovate",
+    "address": "new Zealand",
+    "address2": "new found land",
+    "country": "jordan",
+    "state": "somalia",
+    "city": "new york",
+    "zipcode": "99999",
+    "mobile_number": "1234567890"
   }
 
 
